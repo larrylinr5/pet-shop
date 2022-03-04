@@ -51,7 +51,7 @@
   <!-- #endregion -->
 
   <!-- #region Modal -->
-  <product-modal ref="product" :product="tempProduct" :is-new="isNew" :current_page="pagination.current_page" @update="getProducts"></product-modal>
+  <ProductModal ref="product" :product_input="tempProduct" :is-new="isNew" :current_page="pagination.current_page" @update="getProducts"></ProductModal>
   <DelproductModal ref="delProduct" :item="tempProduct" @update="getProducts"></DelProductModal>
   <!-- #endregion -->
 </template>
@@ -59,11 +59,13 @@
 <script>
 import PagiNation from '@/components/PagiNation.vue'
 import DelproductModal from '@/components/DelproductModal.vue'
+import ProductModal from '@/components/ProductModal.vue'
 
 export default {
   components: {
     PagiNation,
-    DelproductModal
+    DelproductModal,
+    ProductModal
   },
   data () {
     return {
@@ -104,10 +106,12 @@ export default {
         }
         this.isNew = true
         // productModal.show()
+        this.$refs.product.show()
       } else if (isNew === 'edit') { // 編輯
         this.isNew = false
         this.tempProduct = JSON.parse(JSON.stringify(item))
         // productModal.show()
+        this.$refs.product.show()
       } else if (isNew === 'delete') { // 刪除
         this.isNew = false
         this.tempProduct = JSON.parse(JSON.stringify(item))

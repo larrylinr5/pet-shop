@@ -1,5 +1,5 @@
 <template>
-  HOME
+  HOME HOME
 </template>
 
 <script>

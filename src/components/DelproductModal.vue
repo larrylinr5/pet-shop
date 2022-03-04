@@ -26,9 +26,8 @@
 </template>
 
 <script>
-// @import "bootstrap/dist/js/bootstrap.js";
-// import modal from 'bootstrap/js/dist/modal'
-// import bootstrap from 'bootstrap/js/dist/modal'
+// 載入modal
+import Modal from 'bootstrap/js/dist/modal'
 
 export default {
   // 傳入的資料
@@ -36,13 +35,12 @@ export default {
   // 元件的資料
   data () {
     return {
-      modal: null
+      delModal: null
     }
   },
   // 在這個生命週期設定Modal
   mounted () {
-    console.log(this.$refs.delProductModal)
-    this.modal = new bootstrap.Modal(this.$refs.delProductModal)
+    this.delModal = new Modal(this.$refs.delProductModal)
   },
   // 元件的方法區塊
   methods: {
@@ -56,7 +54,7 @@ export default {
             // 彈出成功刪除訊息
             alert(response.data.message)
             // 關閉Modal
-            this.modal.hide()
+            this.delModal.hide()
             // 重新抓畫面的List
             this.$emit('update')
           }
@@ -66,10 +64,9 @@ export default {
           alert('刪除產品失敗')
         })
     },
+    // 開啟modal
     show () {
-      console.log('shoe')
-      console.log(this.$refs.delProductModal)
-      this.modal.show()
+      this.delModal.show()
     }
   }
 }
