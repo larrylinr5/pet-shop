@@ -2,10 +2,12 @@
   <!-- 導覽列 -->
   <FrontNavbar></FrontNavbar>
   <router-view></router-view>
+  <FooterComponent></FooterComponent>
 </template>
 
 <script>
 import FrontNavbar from '@/components/FrontNavbar.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   data () {
@@ -13,7 +15,8 @@ export default {
     }
   },
   components: {
-    FrontNavbar
+    FrontNavbar,
+    FooterComponent
   }
 }
 </script>

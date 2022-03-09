@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 // bootstrap樣式
-import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // #region import axios
 import axios from 'axios'

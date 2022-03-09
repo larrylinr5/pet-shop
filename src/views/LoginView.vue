@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="margin-top:8rem">
+  <div class="container" style="margin-top:8rem;margin-bottom:16.5rem">
     <div class="row justify-content-center">
       <!-- 表單 -->
       <div class="col-6">

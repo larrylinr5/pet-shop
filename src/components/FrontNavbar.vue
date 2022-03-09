@@ -59,9 +59,11 @@
 
           <!-- 登入結帳區塊 -->
           <div class="d-flex">
-            <router-link type="button" class="btn btn-light ml-1" to="/login">登入</router-link>
-            <router-link type="button" class="btn btn-light" to="/cart">結帳<span class="badge rounded-pill bg-danger">{{ cartData?.carts?.length }}</span></router-link>
-            <!--<a href="./cart-2.html"><i class="fas fa-shopping-cart"></i>結帳</a>-->
+            <router-link style="text-decoration:none;color:black;" to="/login">登入</router-link>
+            <router-link style="text-decoration:none;margin-left:15px;color:black;" to="/cart">
+              <i class="bi bi-cart"></i>
+              <span class="badge rounded-pill bg-danger">{{ cartData?.carts?.length }}</span>
+            </router-link>
           </div>
         </nav>
       </div>
