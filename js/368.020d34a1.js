@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkpet_shop"]=self["webpackChunkpet_shop"]||[]).push([[368],{5368:function(n,e,t){t.r(e),t.d(e,{default:function(){return a}});var r=t(6252);const u=(0,r.Uk)(" adminC ");function s(n,e){const t=(0,r.up)("router-view");return(0,r.wg)(),(0,r.iD)(r.HY,null,[u,(0,r.Wm)(t)],64)}var c=t(3744);const o={},p=(0,c.Z)(o,[["render",s]]);var a=p}}]);
+//# sourceMappingURL=368.020d34a1.js.map
