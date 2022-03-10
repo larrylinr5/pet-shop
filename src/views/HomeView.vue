@@ -20,7 +20,7 @@
               <h4 class="mb-0 mt-4 ">{{demoProduct.title}}</h4>
             </div>
             <div class="d-flex justify-content-center mt-3">
-              <p class="card-text text-muted mb-0 w-75">
+              <p class="card-text text-muted mb-0 w-75" style="height:4.5rem;overflow:hidden">
                 {{ demoProduct.description }}
               </p>
             </div>
@@ -60,7 +60,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-4 text-center">
-            <h3>Pet Shop</h3>
+            <h3 style="margin-top:15px">Pet Shop</h3>
             <p class="text-muted">毛寵與您相知相惜，在您回家時守在門口等待，在您難過時撫慰心靈</p>
             <button class="btn btn-dark mt-4 rounded-0" @click="goProducts">找寵去</button>
           </div>
@@ -85,7 +85,6 @@ export default {
           for (let i = 0; i < 4; i++) {
             this.demoProducts.push(this.products[i])
           }
-          console.log('>>>', this.demoProducts)
         }
       )
     },

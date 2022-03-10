@@ -148,7 +148,6 @@ export default {
   mounted () {
     this.productModal = new Modal(this.$refs.productModal)
     this.product = this.product_input
-    console.log('a', this.product_input)
   },
   watch: {
     product_input () {

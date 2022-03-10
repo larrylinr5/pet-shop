@@ -36,8 +36,8 @@ export default {
             this.$router.push('/login')
           })
       } else {
-        alert('您尚未登入。')
         this.$router.push('/login')
+        alert('您尚未登入。')
       }
     }
   },

@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
+    redirect: 'home', // 設定頁面一進來就顯示的頁面，即重定向到goods元件，這裡寫的內容是對應組將的component的值
     component: () => import('../views/FrontView.vue'),
     children: [
       // 首頁

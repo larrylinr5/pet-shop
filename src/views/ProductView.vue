@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     getProduct () {
-      console.log(this.$route)
       const { id } = this.$route.params
       this.$http(`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/product/${id}`).then(
         (res) => {
@@ -59,7 +58,6 @@ export default {
         product_id: this.product.id,
         qty: Number(this.qty)
       }
-      console.log('A', data)
       this.isLoadingItem = this.product.id
       this.$http.post(`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`, { data })
         // 成功的結果

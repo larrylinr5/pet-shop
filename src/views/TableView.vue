@@ -113,7 +113,6 @@ export default {
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
           this.cartData = res.data.data
-          console.log('this.cartData', this.cartData)
         })
     },
     // 電話檢核規則

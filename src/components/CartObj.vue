@@ -32,7 +32,6 @@ export default {
   methods: {
     // 移除單筆購物車內容
     removeCartItem () {
-      console.log('z', (`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${this.item.id}`))
       this.$http.delete(`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart/${this.item.id}`)
         // 成功的結果
         .then(() => {

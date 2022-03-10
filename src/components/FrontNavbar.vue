@@ -42,7 +42,7 @@
 
           <!-- 手機版標題按鈕 -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon" @click="show()"></span>
           </button>
 
           <!-- 標題連結區塊 -->
@@ -68,10 +68,13 @@
         </nav>
       </div>
     </div>
+
+    <navModal ref="nav-modal"></navModal>
 </template>
 
 <script>
 import emitter from '@/libs/emitter'
+import navModal from '@/components/NavModal.vue'
 
 export default {
   data () {
@@ -82,14 +85,19 @@ export default {
       }
     }
   },
+  components: {
+    navModal
+  },
   methods: {
     getCart () {
       this.$http
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`)
         .then((res) => {
-          console.log('cart:', res)
           this.cartData = res.data.data
         })
+    },
+    show () {
+      this.$refs['nav-modal'].show()
     }
   },
   mounted () {

@@ -17,9 +17,6 @@ export default {
   components: {
     FrontNavbar,
     FooterComponent
-  },
-  mounted () {
-    this.$router.push('/home')
   }
 }
 </script>

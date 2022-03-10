@@ -41,6 +41,7 @@ export default {
         // 成功
         .then(() => {
           alert('登出成功')
+          document.cookie = 'larryToken="";expires=""; path=/'
         })
         // 失敗
         .catch(() => {

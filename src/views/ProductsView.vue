@@ -43,7 +43,6 @@ export default {
     getProducts () {
       this.$http(`${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/products/all`).then(
         (res) => {
-          console.log(res)
           this.products = res.data.products
           this.chooseProducts = this.products
         }
@@ -55,9 +54,6 @@ export default {
       } else {
         this.chooseProducts = this.products
       }
-    },
-    goProduct (id) {
-      console.log('>>>', id)
     }
   },
   mounted () {
