@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <!-- 敘述區塊 -->
+  <!-- 敘述區塊
   <div class="bg-light mt-7">
       <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -53,9 +53,10 @@
         </div>
       </div>
     </div>
+  -->
 
     <!-- 前往產品區塊 -->
-    <div class="bg-light py-7" style="margin-top:15px">
+    <div class="bg-light py-7" style="margin-bottom:15px">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-4 text-center">

@@ -60,7 +60,7 @@
           <!-- 登入結帳區塊 -->
           <div class="d-flex">
             <router-link style="text-decoration:none;color:black;" to="/login">登入</router-link>
-            <router-link style="text-decoration:none;margin-left:15px;color:black;" to="/cart">
+            <router-link style="text-decoration:none;margin-left:15px;color:black;" to="/cart" class="position-relative">
               <i class="bi bi-cart"></i>
               <span class="badge rounded-pill bg-danger">{{ cartData?.carts?.length }}</span>
             </router-link>
@@ -96,12 +96,6 @@ export default {
     this.getCart()
     emitter.on('get-cart', () => {
       this.getCart()
-    })
-    emitter.on('login-flgtrue', () => {
-      this.login_flg = true
-    })
-    emitter.on('login-flgfalse', () => {
-      this.login_flg = false
     })
   }
 }

@@ -18,4 +18,5 @@ const app = createApp(App)
 app.use(router)
 // 使用 axios套件
 app.use(VueAxios, axios)
+
 app.mount('#app')

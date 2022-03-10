@@ -1,6 +1,5 @@
 <template>
-
-  <div class="container">
+  <div class="container" style="margin-bottom:calc(100vh - 42rem)">
       <div :style="{backgroundImage:`url(${product.imageUrl})`}" style="min-height: 400px;background-repeat:no-repeat;
       background-position: center center;">
       </div>
@@ -13,14 +12,14 @@
         <div class="col-md-4">
           <div class="input-group mb-3 border mt-3">
             <div class="input-group-prepend">
-              <button class="btn btn-outline-dark rounded-0 border-0 py-3" type="button" id="button-addon1">
-                <i class="fas fa-minus"></i>
+              <button class="btn btn-outline-dark rounded-0 border-0 py-3" type="button" id="button-addon1" @click="minusNum">
+                <i class="bi bi-dash"></i>
               </button>
             </div>
             <input type="text" class="form-control border-0 text-center my-auto shadow-none" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"  v-model="qty">
             <div class="input-group-append">
-              <button class="btn btn-outline-dark rounded-0 border-0 py-3" type="button" id="button-addon2">
-                <i class="fas fa-plus"></i>
+              <button class="btn btn-outline-dark rounded-0 border-0 py-3" type="button" id="button-addon2" @click="addNum">
+                <i class="bi bi-plus"></i>
               </button>
             </div>
           </div>
@@ -34,6 +33,8 @@
 </template>
 
 <script>
+import emitter from '@/libs/emitter'
+
 export default {
   data () {
     return {
@@ -64,12 +65,23 @@ export default {
         // 成功的結果
         .then((response) => {
           this.isLoadingItem = ''
+          emitter.emit('get-cart')
         })
         // 失敗的結果
         .catch(() => {
           alert('新增購物失敗')
           this.isLoadingItem = ''
         })
+    },
+    // +1
+    addNum () {
+      this.qty = Number(this.qty) + 1
+    },
+    // -1
+    minusNum () {
+      if (Number(this.qty) <= 1) {
+        this.qty = 1
+      } else this.qty = Number(this.qty) - 1
     }
   },
   mounted () {

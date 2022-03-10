@@ -30,6 +30,11 @@ const routes = [
       {
         path: 'cart',
         component: () => import('../views/CartView.vue')
+      },
+      // 結帳清單
+      {
+        path: 'table',
+        component: () => import('../views/TableView.vue')
       }
     ]
   },
