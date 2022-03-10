@@ -55,7 +55,7 @@ export default {
     totalMoney () {
       let money = 0
       this.cartData.carts.forEach(x => {
-        money += Number(x.final_total) * Number(x.qty)
+        money += Number(x.final_total)
       })
       return money
     }
