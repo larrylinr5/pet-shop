@@ -49,7 +49,7 @@ export default {
     return {
       user: {
         username: 'larrylinr5@gmail.com',
-        password: 'larrylinr5'
+        password: ''
       }
     }
   },
